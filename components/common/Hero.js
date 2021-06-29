@@ -22,23 +22,25 @@ function Hero({ title, description, bgImageSrc, leftBtnText, rightBtnText }) {
           // border="2px solid orange"☺
           height="100vh"
         >
-        <Fade bottom> 
-          <Box
-            pt={{ xs: "6rem", sm: "6rem", lg: "5rem", xl: "10rem" }}
-            textAlign="center"
-          >
-            <Heading as="h1">{title}</Heading>
-            <Text textTransform="capitalize">{description}</Text>
-          </Box>
-        </Fade>
+          <Fade bottom>
+            <Box
+              pt={{ xs: "6rem", sm: "6rem", lg: "5rem", xl: "10rem" }}
+              textAlign="center"
+            >
+              <Heading as="h1">{title}</Heading>
+              <Text textTransform="capitalize">{description}</Text>
+            </Box>
+          </Fade>
 
           <Flex alignItems="center" flexDirection="column">
-            <Flex mb="2rem" flexDirection={{ xs: "column", sm: "row" }}>
-              <Button>{leftBtnText}</Button>
-              {rightBtnText && (
-                <Button variant="secondary">{rightBtnText}</Button>
-              )}
-            </Flex>
+            <Fade bottom>
+              <Flex mb="2rem" flexDirection={{ xs: "column", sm: "row" }}>
+                <Button>{leftBtnText}</Button>
+                {rightBtnText && (
+                  <Button variant="secondary">{rightBtnText}</Button>
+                )}
+              </Flex>
+            </Fade>
             <Image
               h="2.8rem"
               overflowX="hidden"
@@ -47,7 +49,7 @@ function Hero({ title, description, bgImageSrc, leftBtnText, rightBtnText }) {
             />
           </Flex>
         </Flex>
-      </Section >
+     </Section>
     </>
   );
 }

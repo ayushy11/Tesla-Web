@@ -6,21 +6,24 @@ import { ChakraProvider } from "@chakra-ui/react";
 // import SomeProvider from "components/Providers/SomeProvider";
 
 import { Provider } from 'react-redux';
-import store from '@/redux/store';
+import store from '@/redux/store.js';
 
 function MyApp({ Component, pageProps }) {
-  return (    
-    <ChakraProvider theme={theme}>
-          <Component {...pageProps} />
+  
+  return (
+    <Provider store={store}>
+      <ChakraProvider theme={theme}>
+        <Component {...pageProps} />
       </ChakraProvider>
+    </Provider>
   );
 }
 
 export default MyApp;
 
-// <Provider store={store}>
-      {/* <AnimateSharedLayout> */}
-        {/* <SomeProvider> */}
-        {/* </SomeProvider> */}
-      {/* </AnimateSharedLayout> */}
+// 
+{/* <AnimateSharedLayout> */ }
+{/* <SomeProvider> */ }
+{/* </SomeProvider> */ }
+{/* </AnimateSharedLayout> */ }
 // </Provider>
