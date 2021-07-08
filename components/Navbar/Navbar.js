@@ -104,7 +104,7 @@ function Navbar() {
           <CloseIcon cursor="pointer" onClick={() => setMenuStatus(false)} />
         </Flex>
         {cars && cars.map((car, index) => (
-          <li><Link p="0 10px" key={index}>{car}</Link></li>
+          <li><Link fontWeight="600" p="0 0" key={index}>{car}</Link></li>
         ))}
         <li><Link fontWeight="600">Existing Inventory</Link></li>
         <li><Link fontWeight="600">Used Inventory</Link></li>
